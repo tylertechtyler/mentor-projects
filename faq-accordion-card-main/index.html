@@ -4,17 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+ 
 </head>
 <body>
+  <div class="wrapper">
+    <div class="content">
+      <div class="photo-container">
+        <div class="pattern-top"></div>
+        <div class="pattern-bottom"></div>
+        <picture class="woman-photo">
+          <!--make sure to use media queries here to differentiate the images-->
+          <img src="/images/illustration-woman-online-desktop.svg" class="image1"/>
+          <img src="/images/illustration-woman-online-mobile.svg" class="image2"/>
+        </picture>
+      </div>
+      <article class="questions">
   How many team members can I invite?
   You can invite up to 2 additional users on the Free plan. There is no limit on 
   team members for the Premium plan.
@@ -31,10 +41,13 @@
 
   Do you provide additional support?
   Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        </article>
 
-  <div class="attribution">
+      <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </div>
   </div>
 </body>
 </html>
