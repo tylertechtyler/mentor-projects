@@ -12,11 +12,32 @@ body {
 .wrapper {
   max-width: 80%;
   margin: auto;
+  background: linear-gradient(45deg, rgb(170, 166, 241),rgb(243, 165, 243),rgb(171, 230, 241) 100%);
+  display: flex;
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 25px;
+}
+.media {
+  width: 40%;
+  margin-left: -60px;
+  margin-right: 60px;
+  padding-top: 100px;
+}
+.questions {
+  flex-grow: 1;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 5%;
+  height: 90%;
+  overflow: hidden;
 }
 
   /*this is for the collapsible buttons */
   .collapsible {
-    background-color: #777;
+    background-color: rgb(94, 58, 192);
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -25,18 +46,19 @@ body {
     text-align: left;
     outline: none;
     font-size: 15px;
+    border-radius: 5px;
   }
   
   .active, .collapsible:hover {
-    background-color: #555;
+    background-color: rgb(75, 60, 119);
   }
   
   .content {
     padding: 0 18px;
-    max-height: 0;
+    display: none;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
+    background-color: rgba(183, 223, 231, 0.3);
+    
   }
   .collapsible:after {
     content: '\02c5'; /* Unicode character for "plus" sign (+) */

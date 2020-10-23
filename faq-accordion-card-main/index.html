@@ -29,7 +29,7 @@
   <picture class="woman-photo">
     <!--make sure to use media queries here to differentiate the images-->
     <img src="/images/illustration-woman-online-desktop.svg" class="image1"/>
-    <img src="/images/illustration-woman-online-mobile.svg" class="image2"/>
+    <!--<img src="/images/illustration-woman-online-mobile.svg" class="image2"/>-->
   </picture>
 </div>
 </div>
@@ -70,12 +70,18 @@
   for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
       this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.maxHeight){
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      } 
+      
+      var contents = document.querySelectorAll('div.content')
+    contents.forEach((content) => {
+    	content.style.display = "none"
+    })
+    
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
     });
   }
   </script>
