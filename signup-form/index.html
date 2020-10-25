@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,28 +17,45 @@
   </style>
 </head>
 <body>
+  <div id="page-container">
+<div class="content">
+  <div class="left">
+  <h2>My personal template for making signup pages</h2>
 
-  Learn to code by watching others
+  <p>I coded this based on the sign-up form project on Front End Mentor. In the future I think it would save me a lot of time to use this as a template whenever I am looking to make a sign-up page.</p>
+  </div>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+  <div class="right">
 
-  Try it free 7 days then $20/mo. thereafter
+  <form action="/action_page.php">
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+  <button type="button">Try it free 7 days then $20/mo. thereafter</button>
 
-  Claim your free trial 
+   
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"> 
+  
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"> 
+  
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email"> 
+  
+  <label for="pass">Password (8 characters minimum):</label>
+  <input type="password" id="pass" name="password" minlength="8" required>
+
+  <input type="submit" value="Claim your free trial">
 
   By clicking the button, you are agreeing to our Terms and Services
-  
-  <footer>
+  </form>
+  </div>
+</div>  
+  <footer id="footer">
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://tylertechtyler.github.io/">Tyler Von Harz</a>.
     </p>
   </footer>
+  </div>
 </body>
 </html>
