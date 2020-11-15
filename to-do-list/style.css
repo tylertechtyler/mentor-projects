@@ -25,12 +25,13 @@ body {
     display: flex;
     padding-bottom: 2.5rem; 
     box-shadow: 0 0 20px 1px black; 
-    
+    padding: 1rem;
     border-radius: 25px;
 }
 .left {
     padding: 35px;
     width: 40%;
+    
 }
 .right {
     width: 60%;
@@ -89,6 +90,7 @@ ul {
   padding: 0;
   padding-left: 50px;
   list-style: none;
+  
 }
 
 /* Style the list items */
@@ -159,8 +161,10 @@ ul li.checked::before {
   padding: 30px 40px;
   color: white;
   text-align: center;
+  height: 100%;
   
 }
+
 
 /* Clear floats after the header */
 .header:after {
@@ -178,6 +182,7 @@ input {
   padding: 10px;
   float: left;
   font-size: 16px;
+  
 }
 
 /* Style the "Add" button */
@@ -195,5 +200,24 @@ input {
 }
 
 .addBtn:hover {
+  background-color: #bbb;
+}
+.mid-header {
+  margin-top: 50%;
+}
+.save-button, .load-button {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.save-button:hover, .load-button:hover {
   background-color: #bbb;
 }
