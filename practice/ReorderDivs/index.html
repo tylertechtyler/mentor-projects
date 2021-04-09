@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <label for="orderby">Order by:</label>
+<select name="orderby" id="orderby">
+	<option value="Alphabetical">Alphabetical</option>
+	<option value="Translation">Translation</option>
+	<option value="How Well I Know">How Well I Know</option>
+</select>
+        <div id="rev-works">
+            <figure itemscope itemtype="http://schema.org/Painting">
+                <img src="the-death-of-marat.jpg" alt itemprop="image">
+                <figcaption itemprop="name">Abrir</figcaption>
+                <div>
+                    <span itemprop="Translation">Open (to open)</span>
+                    <time itemprop="How Well I Know">1793</time>
+                    </div>
+            </figure>
+
+            <figure itemscope itemtype="http://schema.org/Painting">
+                <img src="la-liberté-guidant-le-peuple.jpg" alt itemprop="image">
+                <figcaption itemprop="name">Beber</figcaption>
+                <div>
+                  <span itemprop="Translation">Drink (to drink)</span>
+                  <time itemprop="How Well I Know">1830</time>
+                </div>
+            </figure>
+            
+            <figure itemscope itemtype="http://schema.org/Painting">
+              <img src="louis-XVI-roi-de-france-et-de-navarre.jpg" alt itemprop="image">
+              <figcaption itemprop="name">Correr</figcaption>
+              <div>
+                <span itemprop="Translation">Run (to run)</span>
+                <time itemprop="How Well I Know">1789</time>
+              </div>
+            </figure>
+    
+        </div>
+
+        <script>
+            var Alphabetical = document.getElementById("orderby"),
+            cards = document.getElementById("rev-works"),
+            figures = cards.querySelectorAll("figure"),
+            original = cards.innerHTML;
+        function sortUs(parent, child, key) {
+	        var items = Array.prototype.slice.call(document.querySelectorAll(parent + " " + child)).sort(function(a, b) {
+		    var comparA = a.querySelector(key).innerHTML;
+		    var comparB = b.querySelector(key).innerHTML;
+		return (comparA < comparB) ? -1 : (comparA > comparB) ? 1 : 0;
+	});
+	for (var i = 0; i < figures.length; i++) {
+		cards.appendChild(items[i]);
+	}
+}
+    Alphabetical.onchange = function(){ 
+	if (Alphabetical.value == "Alphabetical") { 
+		cards.innerHTML = original;
+	} else {
+		if (Alphabetical.value == "Translation") { 
+			el = "span[itemprop=Translation]"; 
+		}
+	if (Alphabetical.value == "How Well I Know") {
+		el = "time"; 
+	}
+	sortUs("#rev-works","figure",el);
+}}
+        </script>
+    </body>
+</html>

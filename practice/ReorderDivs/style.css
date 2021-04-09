@@ -1,0 +1,5 @@
+#rev-works,
+#rev-works figure div { 
+	display: flex;
+	align-items: flex-start; 
+}
