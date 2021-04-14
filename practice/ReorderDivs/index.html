@@ -4,46 +4,75 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <label for="orderby">Order by:</label>
-<select name="orderby" id="orderby">
-	<option value="Alphabetical">Alphabetical</option>
-	<option value="Translation">Translation</option>
-	<option value="How Well I Know">How Well I Know</option>
-</select>
-        <div id="rev-works">
-            <figure itemscope itemtype="http://schema.org/Painting">
-                <img src="the-death-of-marat.jpg" alt itemprop="image">
-                <figcaption itemprop="name">Abrir</figcaption>
-                <div>
-                    <span itemprop="Translation">Open (to open)</span>
-                    <time itemprop="How Well I Know">1793</time>
-                    </div>
-            </figure>
+        <div class="wrapper">
 
-            <figure itemscope itemtype="http://schema.org/Painting">
-                <img src="la-liberté-guidant-le-peuple.jpg" alt itemprop="image">
-                <figcaption itemprop="name">Beber</figcaption>
-                <div>
-                  <span itemprop="Translation">Drink (to drink)</span>
-                  <time itemprop="How Well I Know">1830</time>
+            <ul class="nav">
+                <li><a class="nav-link" href="#verbs">Verbs</a></li>
+                <li><a class="nav-link" href="adjectives.html">Adjectives</a></li>
+                <li><a class="nav-link" href="adverbs.html">Adverbs</a></li>
+                <li><label for="orderby">Order by:</label>
+                    <select name="orderby" id="orderby">
+                    <option value="Alphabeticl">Alphabetical</option>
+                    <option value="Translation">Translation</option>
+                    <option value="How Well I Know">How Well I Know</option>
+                    </select></li>
+                <li>
+                    <input type="radio" id="male" name="gender" value="Alphabetical">
+                    <label for="Alphabetical">Alphabetical</label><br>
+                    <input type="radio" id="female" name="gender" value="Translation">
+                    <label for="Translation">Translation</label><br>
+                    <input type="radio" id="other" name="gender" value="How Well I Know">
+                    <label for="How Well I Know">How Well I Know</label>
+
+                </li>
+            </ul>
+
+        
+
+        <div id="maingrid">
+
+            <flipcard itemscope itemtype="indexcard">
+                <div class="flipcardinner">
+                <div class="flipcardfront">
+                <h1 itemprop="name">Abrir</h1>
                 </div>
-            </figure>
-            
-            <figure itemscope itemtype="http://schema.org/Painting">
-              <img src="louis-XVI-roi-de-france-et-de-navarre.jpg" alt itemprop="image">
-              <figcaption itemprop="name">Correr</figcaption>
-              <div>
-                <span itemprop="Translation">Run (to run)</span>
-                <time itemprop="How Well I Know">1789</time>
-              </div>
-            </figure>
+                <div class="flipcardback">
+                    <h1 itemprop="Translation">Open (to open)</h1>
+                    <time itemprop="How Well I Know">0973</time>
+                </div>
+                </div>
+            </flipcard>
+
+            <flipcard itemscope itemtype="indexcard">
+                <div class="flipcardinner">
+                <div class="flipcardfront">
+                <h1 itemprop="name">Aburrir</h1>
+                </div>
+                <div class="flipcardback">
+                    <h1 itemprop="Translation">Bore (to bore)</h1>
+                    <time itemprop="How Well I Know">0733</time>
+                </div>
+                </div>
+            </flipcard>
+
+            <flipcard itemscope itemtype="indexcard">
+                <div class="flipcardinner">
+                <div class="flipcardfront">
+                <h1 itemprop="name">Acabar</h1>
+                </div>
+                <div class="flipcardback">
+                    <h1 itemprop="Translation">Finish (to finish)</h1>
+                    <time itemprop="How Well I Know">0013</time>
+                </div>
+                </div>
+            </flipcard>
     
         </div>
-
+    </div>
         <script>
             var Alphabetical = document.getElementById("orderby"),
-            cards = document.getElementById("rev-works"),
-            figures = cards.querySelectorAll("figure"),
+            cards = document.getElementById("maingrid"),
+            flipcards = cards.querySelectorAll("flipcard"),
             original = cards.innerHTML;
         function sortUs(parent, child, key) {
 	        var items = Array.prototype.slice.call(document.querySelectorAll(parent + " " + child)).sort(function(a, b) {
@@ -51,7 +80,7 @@
 		    var comparB = b.querySelector(key).innerHTML;
 		return (comparA < comparB) ? -1 : (comparA > comparB) ? 1 : 0;
 	});
-	for (var i = 0; i < figures.length; i++) {
+	for (var i = 0; i < flipcards.length; i++) {
 		cards.appendChild(items[i]);
 	}
 }
@@ -60,12 +89,12 @@
 		cards.innerHTML = original;
 	} else {
 		if (Alphabetical.value == "Translation") { 
-			el = "span[itemprop=Translation]"; 
+			el = "h1[itemprop=Translation]"; 
 		}
 	if (Alphabetical.value == "How Well I Know") {
 		el = "time"; 
 	}
-	sortUs("#rev-works","figure",el);
+	sortUs("#maingrid","flipcard",el);
 }}
         </script>
     </body>
