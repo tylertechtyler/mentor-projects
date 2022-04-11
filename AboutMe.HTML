@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="description" content="About Tyler Von Harz">
+  <meta name="author" content="Tyler Von Harz">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+</head>
+
+<body>
+    <header>
+        <h1>A little about myself</h1>
+
+    </header>
+
+        <figure>
+        <img src="https://avatars.githubusercontent.com/u/54379034?v=4">
+          <figcaption>So thats me, Tyler</figcaption>
+      </figure>
+  <section>
+  <h2>Can I layout HTML as well as I can layout that mustache?</h2>
+        <p>If you mean sloppy and uneven but OK from a distance</p>
+  <em>then yes</em>
+  <h3>So let me tell you more about myself and what I'm all about</h3>
+  <p>They say a picture paints a thousand words, but you know what they say about HTML image maps?</p>
+  <p>They say <strong>click on an object to learn more about it</strong>, or at least thats what I say.</p>
+
+  <br>
+  <figure>
+  <img src="https://raw.githubusercontent.com/tylertechtyler/hosted-assets/main/room.png" usemap="#image-map" alt="my-room">
+
+<map name="image-map">
+    <area target="_self" alt="Cat" title="Cat" href="#cat" coords="187,158,242,161,280,177,286,201,264,203,238,196,224,208,199,213,177,190" shape="poly">
+    <area target="_self" alt="Books" title="Books" href="#books" coords="228,81,247,106,224,118,197,108,206,85" shape="poly">
+    <area target="_self" alt="Cows" title="Cows" href="#cows" coords="173,40,175,86,141,89,139,43" shape="poly">
+    <area target="_self" alt="Cows" title="Cows" href="#cows" coords="292,64,329,67,326,111,288,106" shape="poly">
+    <area target="_self" alt="Cows" title="Cows" href="#cows" coords="431,72,425,121,376,117,380,70" shape="poly">
+    <area target="_self" alt="Books" title="Books" href="#books" coords="447,98,430,139,477,149,479,99" shape="poly">
+</map>
+  </figure>
+
+        <h3>No but really image maps are the coolest thing you can do with just HTML</h3>
+
+
+  <p>Let me explain what goes into making an image map</p>
+  <ul>
+    <li>Pick out an image. (optional: make it interesting)</li>
+    <li>Host your image in a Github repo so you can access it anywhere</li>
+    <li>Set your img's <em>usemap</em> attribute to your image-map's <em>name</em> attribute</li>
+    <li>Set each <em>area</em> of your image-maps coordinates based on what you want to be clickable</li>
+    <li>Use a tool like MS paint, Photoshop, or free online coordinates generator to find the coordinates</li>
+    <li>Set each area's <em>target</em> attribute to "_self" so that it opens in the same frame as your img</li>
+    <li>Don't forget the <em>alt</em> and <em>title</em> attributes.</li>
+    <li>Go to <a href="https://www.w3schools.com/tags/tag_area.asp">w3schools</a> if you want a decent tutorial</li>
+  </ul>
+  <p>That's kinda neat right?</p>
+  </section>
+  <hr>
+
+  <section>
+  <h2>OK so an actual about me:</h2>
+  <p>My name is Tyler. I'm 26. By day I am a computer repair technician. By night I am asleep.<p>
+  <em>Really, it's exhausting</em>
+  <p>But in the morning, I wake up with a hunger to work on something cool involving web development until I have to go to work.</p>
+
+  <h3>My favorite projects are the kind that are both fun and mostly useless.</h3>
+  <p>I have been going to college online for computer science for a little while from Western Governor's University, but they don't actually teach you all that much. My best teacher's name was professor Google. We are still very close and I am amazed that he is always around to answer my stupid questions. When I asked him how I can learn to code, he introduced me to some of his close colleagues:</p>
+  <ul>
+    <li><a href="freecodecamp.org">Free Code Camp</a></li>
+    <li><a href="stackoverflow.com">Stack Overflow</a></li>
+    <li><a href="theodinproject.com">The Odin Project</a></li>
+    <li><a href="codepen.io">Code Pen</a></li>
+  </ul>
+
+  <h3>I think the best way to learn is to teach</h3>
+  <p>If I don't know something, I try to study it to the point that I can explain it to my little sister. Sometimes I will just talk to my cat about what I am doing and try to break down technical information into less technical terms.</p>
+  <blockquote cite="https://www.vitsoe.com/us/about/good-design">"While we teach, we learn"<br>
+            - Seneca, Roman philosopher
+        </blockquote>
+
+  </section>
+
+
+    <hr>
+    <section>
+    <h2>More detailed information</h2>
+  <p>Here's a cool HTML trick. Use the &lt;details&gt; element to create a collapsable section that the user can click on to reveal more <em>details.</em>
+    <details>
+  <summary id="cat">My cat</summary>
+  <p>My cat, Mittens. She is almost 7 years old. She eats lots of kibble and loves laying in bed.</p>
+</details>
+    <br>
+
+    <details>
+  <summary id="books">My Books</summary>
+  <p>You know what they say: keep your friends close and your books closer. My friends don't tell me bedtime stories but at least my books do.</p>
+</details>
+    <br>
+
+    <details>
+  <summary id="cows">My Cows</summary>
+  <p>I have a bunch of pictures of cows doing yoga hung up around my room. Why? Maybe they are teaching me something about life... maybe they are just there to look silly and make me laugh.</p>
+</details>
+  </section>
+
+</body>
+</html>
